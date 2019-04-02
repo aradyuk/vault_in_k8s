@@ -2,12 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: vault
+  namespace: vault
   labels:
     app: vault
 spec:
   type: LoadBalancer
   externalIPs:
-  - 192.168.50.101
+  - 192.168.50.101 
   externalTrafficPolicy: Local
   ports:
     - port: 8200

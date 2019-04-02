@@ -12,7 +12,7 @@ Related/Useful links:
 1. [Consul](https://www.consul.io/docs/install/index.html)
 1. [Vault](https://www.vaultproject.io/docs/install/)
 1. Pre-installed k8s, by default will be used `vault` namespace
-1. Pre-configured AWS KMS key and access (Role/Policy) - Optional usage (Might be skipped)
+1. Pre-configured AWS KMS key and access (Role/Policy)
 
 ### TLS Certificates
 
@@ -54,6 +54,8 @@ In a new terminal window, navigate to the project directory and set the followin
 
 ```sh
 $ export VAULT_ADDR=https://127.0.0.1:8200
+$ export VAULT_TOKEN=
+$ export VAULT_SKIP_VERIFY=true
 $ export VAULT_CACERT="certs/ca.pem"
 ```
 

@@ -1,8 +1,8 @@
 {
   "listener": {
-    "tcp":{
+    "tcp": {
       "address": "0.0.0.0:8200",
-      "tls_disable": 0,
+      "tls_disable": 1,
       "tls_cert_file": "/etc/tls/vault.pem",
       "tls_key_file": "/etc/tls/vault-key.pem"
     }
@@ -18,8 +18,10 @@
 
   "seal": {
     "awskms": {
-      "kms_key_id": "id", 
-      "region": "eu-west-1"
+      "kms_key_id": "",
+      "region": "eu-central-1", 
+      "access_key": "",
+      "secret_key": ""
       }
   },
 
