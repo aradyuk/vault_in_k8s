@@ -54,7 +54,10 @@ In a new terminal window, navigate to the project directory and set the followin
 
 ```sh
 $ export VAULT_ADDR=https://127.0.0.1:8200
-$ export VAULT_TOKEN=
+$ export VAULT_TOKEN=your_token
+```
+If having problem with x509, without a proper cert is first way with cert the second one:
+```sh
 $ export VAULT_SKIP_VERIFY=true
 $ export VAULT_CACERT="certs/ca.pem"
 ```
