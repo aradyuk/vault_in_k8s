@@ -44,16 +44,18 @@ up)  echo "Create Consul, Vault..."
      
      echo "All done! Forwarding port 8200..."
      #POD=$(kubectl get pods -o=name | grep vault | sed "s/^.\{4\}//")
+
+     watch -n1 "echo -e "-------Completed----------"; kubectl get all -n=vault"
      
-     while true; do
-       STATUS=$(kubectl get pods ${POD} -o jsonpath="{.status.phase}")
-       if [ "$STATUS" == "Running" ]; then
-         break
-       else
-         echo "Pod status is: ${STATUS}"
-         sleep 5
-       fi
-     done
+#     while true; do
+#       STATUS=$(kubectl get pods ${POD} -o jsonpath="{.status.phase}")
+#       if [ "$STATUS" == "Running" ]; then
+#         break
+#       else
+#         echo "Pod status is: ${STATUS}"
+#         sleep 5
+#       fi
+#     done
      
      #kubectl port-forward --address 0.0.0.0 $POD 8200:8200
   ;;
