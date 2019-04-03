@@ -9,7 +9,7 @@ up)  echo "Create Consul, Vault..."
      kubectl create namespace vault
      
      echo "Generating the Gossip encryption key..."
-     export GOSSIP_ENCRYPTION_KEY=$(consul keygen)
+     GOSSIP_ENCRYPTION_KEY=$(consul keygen)
      
      echo "Creating the Consul Secret to store the Gossip key and the TLS certificates..."
      kubectl create secret generic consul \

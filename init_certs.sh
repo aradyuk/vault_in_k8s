@@ -8,6 +8,7 @@ up) echo "Creating CA, certs.."
 
     if [ "$num" -eq 0 ]; then 
       cfssl gencert -initca certs/config/ca-csr.json | cfssljson -bare certs/ca
+      sleep 2
       cfssl gencert \
           -ca=certs/ca.pem \
           -ca-key=certs/ca-key.pem \
